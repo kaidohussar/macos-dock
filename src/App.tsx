@@ -1,6 +1,5 @@
 import styles from "./App.module.scss";
-import Dock from "./components";
-import DockItem from "./components/Item";
+
 import {
   EmailIcon,
   CalendarIcon,
@@ -9,17 +8,18 @@ import {
   BellIcon,
   SettingsIcon,
 } from "@chakra-ui/icons";
+import Dock from "./components";
 
 function App() {
   return (
     <div className={styles.root}>
       <Dock>
-        <DockItem icon={<EmailIcon boxSize={20} />} />
-        <DockItem icon={<CalendarIcon boxSize={20} />} />
-        <DockItem icon={<SearchIcon boxSize={20} />} />
-        <DockItem icon={<ChatIcon boxSize={20} />} />
-        <DockItem icon={<BellIcon boxSize={20} />} />
-        <DockItem icon={<SettingsIcon boxSize={20} />} />
+        <Dock.Item icon={<EmailIcon boxSize={20} />} />
+        <Dock.Item icon={<CalendarIcon boxSize={20} />} />
+        <Dock.Item icon={<SearchIcon boxSize={20} />} />
+        <Dock.Item icon={<ChatIcon boxSize={20} />} />
+        <Dock.Item icon={<BellIcon boxSize={20} />} />
+        <Dock.Item icon={<SettingsIcon boxSize={20} />} />
       </Dock>
     </div>
   );
